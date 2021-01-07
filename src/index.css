@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f8;
+}
+.title {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 5vh;
+}
+.underline {
+  width: 5%;
+  background-color: rgb(105, 85, 85);
+  height: 5px;
+  margin: auto;
+}
+.input {
+  width: 15%;
+  margin: auto;
+  margin-top: 3vh;
+  text-align: center;
+}
+.inputs {
+  border-radius: 8px;
+  width: 100%;
+  height: 30px;
+  border: transparent;
+  padding: 10px;
+  font-size: 20px;
+}
+.loading {
+  text-align: center;
+  margin: 5vh;
+}
+.article {
+  width: 300px;
+  position: relative;
+}
+.img {
+  width: 300px;
+  border: 8px solid rgb(205, 171, 171);
+  border-radius: 10px;
+  transition: 0.7s;
+}
+img:hover {
+  transform: scaleY(1.1);
+  filter: blur(3px);
+  filter: grayscale(1);
+}
+.main-content {
+  width: 80%;
+  margin: auto;
+  margin-top: 5vh;
+  display: grid;
+  row-gap: 3vh;
+  grid-template-columns: repeat(3, 400px);
+  justify-items: center;
+  justify-content: center;
+}
+
+.drink-name {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
