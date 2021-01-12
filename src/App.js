@@ -1,7 +1,9 @@
 import {useState,useEffect } from 'react'
 import Cocktails from './cocktails'
 import Loading from './loading'
-
+import SingleDrink from './singleDrink'
+import Error from './error'
+ import {BrowserRouter as Router ,Route, Switch} from 'react-router-dom'
 const URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
 const baseURL ='https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
@@ -24,24 +26,23 @@ function App() {
   if(loading){
     return <Loading/>
   }
-  return (
-
-<main>
-<div className="title">
-<h1> Best Cocktails</h1>
-</div>
-<div className="underline"></div>
-<div className="input">
-<input placeholder="Search your favorite Cocktail" className='inputs' type="text"/>
-</div>
-<div className="main-content">
+  return <Router> 
+<Switch>
+<Route exact path='/'>
 <Cocktails  menu={menu}/>
+</Route>
+<Route path='/singledrink' >
+<SingleDrink menu={menu} />
+</Route>
 
-</div>
+<Route path='*'>
+<Error/>
+</Route>
+</Switch>
 
-</main>
-
-  );
+ 
+</Router>
+  ;
 }
 
 export default App;
