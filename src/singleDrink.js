@@ -13,7 +13,10 @@ return <>
 {abc.map(item=>{
     console.log(item);
       const {idDrink:id,strCategory:cat,strDrink:name, strGlass: glass, strIngredient1:ingr1,strIngredient2:ingr2,strIngredient3:ingr3, strDrinkThumb:image, strInstructions:instr }=item
+      let ingred=[ingr1,ingr2,ingr3]
+
       return <article key={id} className="single-article">
+      
       <div className="single-container">
       <img className='single-imge' src={image} alt=""/>
       
@@ -25,9 +28,13 @@ return <>
      
       <h4 className='list'>{cat}</h4>
       <ul className="list">
-      <li className='list'>{ingr1}</li>
-      <li className='list'>{ingr2}</li>
-      <li className='list'>{ingr3}</li>
+      {ingred.map((item,index)=>{
+        if(!item){
+          return
+        }
+        else{
+       return <li key={index} className='list'>{item}</li>}
+      })}
       </ul>
       </header>
       </div>

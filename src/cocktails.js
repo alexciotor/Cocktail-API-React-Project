@@ -17,7 +17,7 @@ return <>
    const {idDrink:id,strDrink,strCategory,strDrinkThumb,strIngredient1,strIngredient2,strIngredient3,strGlass
 } =item
 
-return <Link to='singledrink'> <article onClick={()=>{
+return <Link to='singledrink'> <article key={id} onClick={()=>{
     localStorage.setItem('drink', id)  
 }} className='article'>
  
