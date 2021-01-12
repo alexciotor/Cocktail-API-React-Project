@@ -22,9 +22,9 @@ return <>
       <h1>{name}</h1>
       <p>{instr}</p>
       </div>
+     
+      <h4 className='list'>{cat}</h4>
       <ul className="list">
-      <li className='list'>{cat}</li>
-      <li className='list'>{glass}</li>
       <li className='list'>{ingr1}</li>
       <li className='list'>{ingr2}</li>
       <li className='list'>{ingr3}</li>
