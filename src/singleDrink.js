@@ -24,7 +24,7 @@ return <>
       <div className="single-details">
       <h1>{name}</h1>
       <p>{instr}</p>
-      </div>
+      </div>  
      
       <h4 className='list'>{cat}</h4>
       <ul className="list">
