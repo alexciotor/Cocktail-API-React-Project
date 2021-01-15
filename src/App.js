@@ -5,8 +5,7 @@ import SingleDrink from './singleDrink'
 import Error from './error'
  import {BrowserRouter as Router ,Route, Switch} from 'react-router-dom'
 const URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
-const baseURL ='https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
-
+ 
 function App() {
   const [menu,setMenu] =useState([])
   const [loading, setLoading] =useState(false)
