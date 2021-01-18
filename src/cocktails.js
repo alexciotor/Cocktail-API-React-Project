@@ -7,9 +7,7 @@ return <>
 <h1> Best Cocktails</h1>
 </div>
 <div className="underline"></div>
-<div className="input">
-<input placeholder="Search your favorite Cocktail" className='inputs' type="text"/>
-</div>
+ 
 <div className="main-content">
 
 
